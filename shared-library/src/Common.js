@@ -1,3 +1,1 @@
-import React from "react";
-
-export const NameContextProvider = "No name provided"
+export const PI = 3.14

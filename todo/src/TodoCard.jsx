@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { NameContextProvider } from "@shared/shared-library";
 
 const style = {
     width: '150px',
@@ -17,12 +16,10 @@ const style = {
 const TodoCard = ({ dayOfDecember }) => {
     const [isClicked, setIsClicked] = useState(false);
     const daysUntilChristmas = 24 - dayOfDecember;
-    const name = React.useContex(NameContextProvider);
 
     return (
         <>
         <h3>Todo Card</h3>
-        <p>Welcome, {name}</p>
         <div onClick={() => setIsClicked(!isClicked)} style={style}>
             {isClicked ? (
                 <p>{daysUntilChristmas} days until Christmas 🎅</p>
