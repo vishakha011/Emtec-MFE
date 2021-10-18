@@ -1,0 +1,10 @@
+{
+  "name": "@shared/shared-library",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "main": "./src/index.js",
+  "peerdependencies": {
+    "react": "^17.0.2"
+  }
+}
