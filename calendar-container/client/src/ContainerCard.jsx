@@ -10,6 +10,7 @@ const style = {
 };
 
 const ContainerCard = () => {
+
   return (
     <div style={style}>
       <React.Suspense fallback={<p>Loading content from app 2...</p>}>

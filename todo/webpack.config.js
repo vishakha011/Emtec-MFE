@@ -6,7 +6,7 @@ const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPl
 module.exports = {
     mode: 'development',
     devServer: {
-        port: 3001,
+        port: 3000,
     },
     output: {
         filename: "bundle.js",
@@ -41,12 +41,12 @@ module.exports = {
             shared: [
                 'react', 
                 'react-dom',
-                {
-                    "@shared/shared-library": {
-                        import: "@shared/shared-library",
-                        requiredVersion: require("../shared-library/package.json").version,
-                    }
-                }
+                // {
+                //     "@vishakha01/mfe-shared-library": {
+                //         import: "@vishakha01/mfe-shared-library",
+                //         // requiredVersion: require("../shared-library/package.json").version,
+                //     }
+                // }
             ],
         }),
     ],

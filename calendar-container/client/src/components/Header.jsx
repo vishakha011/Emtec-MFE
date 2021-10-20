@@ -1,8 +1,10 @@
-// import PI  from "@shared/shared-library";
+// import AddNumbers from "@vishakha01/mfe-shared-library";
+import {AddNumbers} from "@vishakha01/mfe-shared-library/dist/index";
 import { Link } from "react-router-dom";
 import React from "react";
 
 const Header = () => {
+  const RenderAddNumbers = AddNumbers(12, 14)
 
   return (
     <header>
@@ -17,7 +19,10 @@ const Header = () => {
           </Link>
         </ul>
       </nav>
-      {/* <h1>Welcome, {PI}</h1> */}
+      <div>
+        <p>{RenderAddNumbers}</p>
+      </div>
+      
     </header>
   );
 };
