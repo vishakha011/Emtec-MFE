@@ -1,7 +1,13 @@
-// import AddNumbers from "@vishakha01/mfe-shared-library";
-import {AddNumbers} from "@vishakha01/mfe-shared-library/dist/index";
+import AddNumbers from "@vishakha01/mfe-common-library";
 import { Link } from "react-router-dom";
 import React from "react";
+
+const CommonModulestyle = {
+  boxShadow: "0px 0px 5px 0px lightblue",
+  padding: "1rem 2rem",
+  margin: "2rem",
+  width: "600px"
+}
 
 const Header = () => {
   const RenderAddNumbers = AddNumbers(12, 14)
@@ -19,7 +25,8 @@ const Header = () => {
           </Link>
         </ul>
       </nav>
-      <div>
+      <div style={CommonModulestyle}>
+      <h3>Common Module Content</h3>
         <p>{RenderAddNumbers}</p>
       </div>
       

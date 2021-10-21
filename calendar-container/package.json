@@ -10,7 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vishakha01/mfe-shared-library": "^1.0.0",
     "express": "^4.17.1"
   }
 }

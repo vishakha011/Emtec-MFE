@@ -65,9 +65,9 @@ module.exports = {
                 'react', 
                 'react-dom',
                 {
-                    "@vishakha01/mfe-shared-library": {
-                        import: "@vishakha01/mfe-shared-library",
-                        // requiredVersion: require("../shared-library/package.json").version,
+                    "@vishakha01/mfe-common-library": {
+                        import: "@vishakha01/mfe-common-library",
+                        requiredVersion: require("../../mfe-common-library/package.json").version,
                     }
                 }
             ],
