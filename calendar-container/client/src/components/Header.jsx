@@ -1,4 +1,5 @@
 import AddNumbers from "@vishakha01/mfe-common-library";
+import { Constants } from "@vishakha01/mfe-constants-library"
 import { Link } from "react-router-dom";
 import React from "react";
 
@@ -7,6 +8,15 @@ const CommonModulestyle = {
   padding: "1rem 2rem",
   margin: "2rem",
   width: "600px"
+}
+
+const btn = {
+  display: "inline-block",
+  padding: "8px 16px",
+  margin:"0 5px",
+  outline:"none",
+  border:"none",
+  cursor: "pointer"
 }
 
 const Header = () => {
@@ -29,7 +39,11 @@ const Header = () => {
       <h3>Common Module Content</h3>
         <p>{RenderAddNumbers}</p>
       </div>
-      
+      <div  style={CommonModulestyle}>
+        <h3>Contants Module Contents</h3>
+        <button style={btn} onClick={() =>alert(Constants.UNKNOWN_ERROR)}>Unknown Error</button>
+        <button style={btn} onClick={() =>alert(Constants.NETWORK_ERROR)}>Unknown Error</button>
+      </div>
     </header>
   );
 };

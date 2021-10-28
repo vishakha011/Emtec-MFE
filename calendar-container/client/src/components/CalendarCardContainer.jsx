@@ -1,4 +1,6 @@
 import React from "react";
+import axios from "axios";
+// import FetchDataFromServer from "../components/FetchDataFromServer";
 
 const CalendarCard = React.lazy(() => import("calendar_card/CalendarCard"));
 
@@ -11,17 +13,16 @@ const style = {
 const CalendarCardContainer = () => {
   const calendarCards = Array.from(Array(24).keys());
   const [data, setData] = React.useState(null);
-
+ 
   React.useEffect(() => {
-    fetch("/api")
-      .then((res) => res.json())
-      .then((data) => setData(data.message));
+    axios.get("/api").then((response)=> setDataresponse.data)
   }, []);
   
   return (
     <main>
       <h1>This is the calendar-container app</h1>
       <p>{!data ? "Loading..." : data}</p>
+      {/* <FetchDataFromServer/> */}
       <div style={style}>
         {calendarCards.map((day) => (
           <React.Suspense

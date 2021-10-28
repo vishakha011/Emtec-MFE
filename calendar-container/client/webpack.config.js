@@ -8,12 +8,6 @@ const Dotenv =require('dotenv-webpack');
 const TODO_PORT = process.env.TODO_PORT || 8081
 const CALENDAR_PORT = process.env.CALENDAR_PORT || 8082
 
-const pathToCommon = "@shared/shared-library";
-
-const pathAlias = {
-    '@':pathToCommon,
-}
-
 
 module.exports = {
     mode: 'development',
@@ -47,7 +41,7 @@ module.exports = {
     resolve: {
         modules: [path.resolve('./src'), path.resolve('./node_modules')],
         extensions: ['*', '.js', '.jsx'],
-        alias: pathAlias,
+        // alias: pathAlias,
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -68,6 +62,12 @@ module.exports = {
                     "@vishakha01/mfe-common-library": {
                         import: "@vishakha01/mfe-common-library",
                         requiredVersion: require("../../mfe-common-library/package.json").version,
+                    }
+                },
+                {
+                    "@vishakha01/mfe-constants-library": {
+                        import: "@vishakha01/mfe-constants-library",
+                        requiredVersion: require("../../mfe-constants-library/package.json").version,
                     }
                 }
             ],
